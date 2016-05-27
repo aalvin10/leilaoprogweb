@@ -1,0 +1,153 @@
+
+ <nav class="navbar navbar-default" style="margin-top:0px" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/">Página Inicial</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#/arrematados">Arrematados <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/proxitens">Próximos itens</a></li>
+        <li><a href="#/comofunciona">Como Funciona?</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control lg" placeholder="Busca" ng-model="query">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      	<li><a href="#/comofunciona">Olá Administrador</a> </li>
+      
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mais Informações <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#/contato">Contato</a></li>
+            <li class="divider"></li>
+            <li><a href="#/configuracoes">Configurações</a></li>
+            <li><a href="#/cadastrar&objeto">Cadastrar Objeto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-3 centered">
+        <img src="../public/img/icon.png" width="200" height="200" />
+      </div>
+      <div class="col-sm-9 centered">
+        <br><br>
+        <h1>{{nomeLeilao}}</h1>
+        <p>{{descricaoLeilao}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container" ng-controller="myCtrl">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+		<button class="btn btn-primary btn-block" ng-show="cadastrarCliente" type="button" data-toggle="collapse" data-target="#cadastrarSocio" aria-expanded="false" aria-controls="cadastrarSocio">
+				Socio
+			</button>
+			<div class="collapse well" id="cadastrarSocio">
+				<div ng-repeat="Socios in todosSocios | filter:query">
+					<div class="row">
+						<form method="POST" action="../deletarSocioComCodigo">
+						<input ng-hide="true" class="form-control" id="id" name="id" value="{{Socios.id}}">
+						<ul>
+					       <li>{{Socios.id}} Nome:  {{Socios.nome}} CNPJ:  {{Socios.cnpj}}<span class="sr-only">(current)</span></li>
+					       <button type="submit" class="btn btn-danger" ng-click="">Remover</button> <br><br>
+						</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 column">
+			
+			<button class="btn btn-primary btn-block" ng-show="cadastrarSocio"type="button" data-toggle="collapse"  data-target="#cadastrarCliente" aria-expanded="false" aria-controls="cadastrarCliente">
+				Cliente
+			</button>	
+			<div class="collapse well" id="cadastrarCliente" >
+				<div ng-repeat="Usuario in todosClientes | filter:query">
+					<div class="row">
+						<form method="POST" action="../deletarClienteComCodigo">
+						<input ng-hide="true" class="form-control" id="id" name="id" value="{{Usuario.id}}">
+						<ul>
+ 							<li>ID:{{Usuario.id}} Nome:  {{Usuario.nome}} CPF:  {{Usuario.cpf}}<span class="sr-only">(current)</span></li><button type="submit" class="btn btn-danger">Remover</button> <br><br>						</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 column">
+			
+			<button class="btn btn-primary btn-block" type="button" data-toggle="collapse"  data-target="#cadastrarProduto" aria-expanded="false" aria-controls="cadastrarProduto">
+				Produto
+			</button>			
+			<div class="collapse" id="cadastrarProduto" >
+			  <div class="well">
+				<div class="row" onload="verificar">
+					<div ng-repeat="produto in todosProdutos | filter:query">
+						<div class="col-sm-4 centered">
+							<label>{{produto.id}} - </label>
+							<label>{{produto.nome}}</label>
+							<img src="{{produto.img}}" width="200" height="200" class="img-responsive img-thumbnail"  alt="{{produto.id}}"><br>
+							<br>
+				          <form class="form-signin" role="form" method="POST" action="../deletarProdutoComCodigo">
+				          	<input ng-hide="true" class="form-control" id="id" name="id" value="{{produto.id}}">
+							<button class="btn btn-large btn-danger" type="submit">X</button>
+						  </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+ <footer>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <header class="hero-unit">
+              <p>Formas Pagamento</p>
+              <div class="row">
+                <img src="../public/img/formaspagamento_v3.png">
+              </div>
+            </header>
+          </div>
+          <div class="col-sm-4">
+            <header class="hero-unit">
+              <p>Certificados</p>
+              <div class="row">
+                <img src="../public/img/certificados.png">
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="push">
+        <!--//-->
+      </div>
+    </div>
+</footer>
+<div ng-include="'../public/css/design.css'"></div>
+
+
+
+
+</script>

@@ -1,0 +1,8 @@
+[
+    {
+        "id": "1",
+        "img": "../public/img/foto1.jpg", 
+        "item": "Produto 1", 
+        "descricao": "Leilão 1"
+    }
+]

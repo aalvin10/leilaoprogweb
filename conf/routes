@@ -1,0 +1,74 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+# Import Secure routes
+*       /                                       module:secure
+
+GET		/admin									Admin.admin
+GET		/home									Security.login
+
+
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Import CRUD routes
+*     /		           							module:crud
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+
+POST 	/cadastrarProduto				     	    ProdutoController.cadastrarProduto
+POST	/deletarProduto								ProdutoController.deletarProduto
+POST	/deletarProdutoComCodigo					ProdutoController.deletarProdutoComCodigo
+POST 	/listarProdutos								ProdutoController.listarProduto
+GET		/listarProdutosDoSocio						ProdutoController.listarProdutoDoSocio
+POST	/atualizarProduto							ProdutoController.atualizarProduto
+POST	/confirmacaoSocio							ProdutoController.confirmacaoSocio
+POST	/confirmacaoAtendente						ProdutoController.confirmacaoAtendente
+POST	/listarTodosProdutos						ProdutoController.listarTodosProdutos
+GET		/listarProdutoDoSocio						ProdutoController.listarProdutoDoSocio
+
+
+
+
+POST 	/cadastrarCliente							UsuarioController.cadastrarCliente
+POST 	/deletarCliente								UsuarioController.deletarCliente
+POST 	/deletarClienteComCodigo					UsuarioController.deletarClienteComCodigo
+GET 	/logoutUsuario								UsuarioController.logoutUsuario
+POST	/loginUsuario								UsuarioController.loginUsuario
+GET 	/situacaoCliente							UsuarioController.situacaoCliente
+POST	/atualizarCliente							UsuarioController.atualizarCliente
+POST	/clienteGerouPendencia						UsuarioController.gerouPendencia
+POST	/clienteQuitouPendencia						UsuarioController.quitouPendencia
+POST	/clientePossuiPendencia						UsuarioController.possuiPendencia
+POST	/listarCliente								UsuarioController.listarCliente
+POST	/isConnected								UsuarioController.isConnected
+POST	/nomeUsuario								UsuarioController.connected
+POST	/comprarLances								UsuarioController.comprarLances
+POST	/findAllUsers								UsuarioController.findAllUsers
+
+POST 	/cadastrarSocio								SocioController.cadastrarSocio
+POST 	/deletarSocio								SocioController.deletarSocio
+POST	/deletarSocioComCodigo						SocioController.deletarSocioComCodigo
+POST	/atualizarSocio								SocioController.atualizarSocio
+GET		/logoutSocio								SocioController.logoutSocio
+GET		/loginSocio									SocioController.loginSocio
+GET		/situacao									SocioController.situacao
+POST	/socioGerouPendendia						SocioController.gerouPendencia
+POST	/socioQuitouPendendia						SocioController.quitouPendencia
+POST	/socioPossuiPendendia						SocioController.possuiPendencia
+POST	/listarSocio								SocioController.listarSocio
+POST 	/findAllSocios								SocioController.findAllSocios
+
+POST	/darLance									LanceController.calcularLance
+POST		/listarLance							LanceController.listarLance
+
+POST 	/inserirImagem								ProdutoController.Upload
+
+									

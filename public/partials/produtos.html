@@ -1,0 +1,136 @@
+
+ <nav class="navbar navbar-default" style="margin-top:0px" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/">Página Inicial</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#/arrematados">Arrematados <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/proxitens">Próximos itens</a></li>
+        <li><a href="#/comofunciona">Como Funciona?</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control lg" placeholder="Busca" ng-model="query">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      	<li><a href="#/comofunciona">Olá Visitante</a> </li>
+      
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mais Informações <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#/contato">Contato</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-2 centered">
+        <img src="../public/img/icon.png" width="200" height="200" />
+      </div>
+      <div class="col-sm-6 centered">
+        <br><br>
+        <h1>{{nomeLeilao}}</h1>
+        <p>{{descricaoLeilao}}</p>
+      </div>
+
+      <div class="col-sm-4 centered">
+        <div class="container ">
+          <form class="form-signin" role="form" method="POST" action="login" id="enviar">
+            <h2 class="form-signin-heading" contenteditable="false">Acesse sua conta:</h2>
+            <p id="username-field">
+			<input type="text" class="form-control" placeholder="Email" required="" autofocus="" contenteditable="false" name="username" id="username">
+			
+			</p>
+			<p id="password-field">
+				<input type="password" class="form-control" placeholder="Senha" required="" contenteditable="false" id="password" name="password" value="">
+			</p>
+			<p id="remember-field">
+				<input type="checkbox" name="remember" id="remember" value="true" />
+				<label for="remember">Lembrar-me</label>
+			</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 centered">
+                  <p id="signin-field">
+                  <button class="btn btn-lg btn-success btn-block" type="submit" id="signin">Entrar</button>
+                  </p>
+                </div>
+                <div class="col-sm-6 centered">
+                  <a href="#/cadastrar" style="color:white"><button class="btn btn-lg btn-success btn-block" type="submit">Cadastrar</button></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<div class="row" onload="verificar">
+	<div ng-repeat="produtos in produto | filter:query">
+		<div class="col-sm-4 centered">
+			<h3>{{produtos.nome}}</h3>
+			<p>{{produtos.descricao}}</p>
+			<img src="{{produtos.img}}" width="200" height="200" class="img-responsive img-thumbnail"  alt="{{produtos.id}}"><br>
+			<br>
+          <form class="form-signin" role="form" method="GET" action="darLance">
+          	<p ng-hide="true" id="usuario" name="usuario" value="1"></p>
+          	<p ng-hide="true" id="produto" name="produto" value="2"></p>
+			<button class="btn btn-large btn-danger" type="submit" ng-disabled="true"> &diams; Login &diams;</button>
+		  </form>
+		
+		</div>
+	</div>
+</div>
+<br>
+ <footer>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <header class="hero-unit">
+              <p>Formas Pagamento</p>
+              <div class="row">
+                <img src="../public/img/formaspagamento_v3.png">
+              </div>
+            </header>
+          </div>
+          <div class="col-sm-4">
+            <header class="hero-unit">
+              <p>Certificados</p>
+              <div class="row">
+                <img src="../public/img/certificados.png">
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="push">
+        <!--//-->
+      </div>
+    </div>
+</footer>
+<div ng-include="'../public/css/design.css'"></div>
+
+
+
+
+</script>

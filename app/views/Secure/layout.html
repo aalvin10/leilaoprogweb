@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Leilão Online</title>
+  <link rel="stylesheet" href="../public/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/secure.css'}" />
+  
+  
+  <script src="../public/bower_components/jquery/dist/jquery.js"></script>
+  <script src="../public/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../public/bower_components/angular/angular.js"></script>
+  <script src="../public/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../public/bower_components/angular-route/angular-route.js"></script>
+  <script src="../public/bower_components/angular-resource/angular-resource.js"></script>
+  
+  <script src="../public/js/app.js"></script>
+  <script src="../public/js/controllers.js"></script>
+  <script src="../public/js/filters.js"></script>
+</head>
+<body>
+ <div id="login">
+	
+	<h1>&{'secure.title'}</h1>
+		
+	#{form @authenticate()}
+		
+		#{if flash.error}
+			<p class="error">
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+	
+		
+	#{/form}
+</div>
+
+<div class="container" ng-controller="myCtrl">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+		</div>
+		<div class="col-md-4 column">
+			<button class="btn btn-primary btn-block " type="button"><a href="/" style="color:white">Ok! Tentar novamente</button></a>
+			<button class="btn btn-primary btn-block" type="button"><a href="/recuperarSenha" style="color:white">Recuperar senha</button></a>
+		</div>
+		<div class="col-md-4 column">
+		</div>
+	</div>
+</div>
+<br>
+
+</body>
+</html>

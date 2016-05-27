@@ -1,0 +1,51 @@
+<style>
+		.centered {
+		text-align:center;
+		}
+		html, body {
+		height: 100%;
+		}
+		footer {
+		color: #555;
+		background: #ffffff;
+		padding: 17px 0 18px 0;
+		border-top: 1px solid #000;
+		}
+		footer a:hover {
+		color: black;
+		}
+		a:link
+		{
+		color:white; 
+ 		text-decoration:none;
+ 		border-bottom: 0px
+		}
+
+		.wrapper {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto -40px;
+		}
+		.push {
+		height: 63px;
+		}
+		/* not required for sticky footer; just pushes hero down a bit */
+		.wrapper > .container {
+		padding-top: 1px;
+		}
+		.jumbotron {
+		margin-bottom: 0px;
+		background-image: url(../public/img/fundoJumbotron2.jpg);
+		background-position: 0% 25%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: white;
+		text-shadow: black 0.3em 0.3em 0.3em;
+		}
+		.fundo {
+		background-image: url(../public/img/fundo.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		}
+	</style>

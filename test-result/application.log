@@ -1,0 +1,445 @@
+30 Jun 2015 20:55:37,136 INFO  ~ Starting C:\Users\Alvaro Ferreira\Desktop\APKS\leilao
+30 Jun 2015 20:55:40,062 INFO  ~ Module secure is available (C:\play1-1.3.0\modules\secure)
+30 Jun 2015 20:55:46,391 WARN  ~ You're running Play! in DEV mode
+30 Jun 2015 20:55:46,878 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+30 Jun 2015 21:11:15,185 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 21:11:23,856 ERROR ~ Database [default] Cannot connected to the database : Access denied for user 'root'@'localhost' (using password: NO)
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:125)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+30 Jun 2015 21:11:31,651 ERROR ~ 
+
+@6mjep65b5
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occured : Cannot connected to the database[default], Access denied for user 'root'@'localhost' (using password: NO)
+
+play.exceptions.DatabaseException: Cannot connected to the database[default], Access denied for user 'root'@'localhost' (using password: NO)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:196)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:515)
+	at play.Play.start(Play.java:537)
+	at play.Play.detectChanges(Play.java:653)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:125)
+	... 5 more
+30 Jun 2015 21:39:56,747 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 21:40:05,181 INFO  ~ Application 'leilao' is now started !
+30 Jun 2015 21:47:02,720 ERROR ~ 
+
+@6mjep65b6
+logout.php action not found
+
+Action not found
+Action logout.php could not be found. Error raised is Controller controllers.logout not found
+
+play.exceptions.ActionNotFoundException: Action logout.php not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.logout not found
+	... 3 more
+30 Jun 2015 21:48:28,426 ERROR ~ 
+
+@6mjep65b7
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 21:50:28,277 ERROR ~ 
+
+@6mjep65b8
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 21:52:16,946 ERROR ~ 
+
+@6mjep65b9
+Internal Server Error (500) for request GET /deletarCliente
+
+Execution exception (In /app/controllers/UsuarioController.java around line 57)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UsuarioController.deletarCliente(UsuarioController.java:57)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+30 Jun 2015 21:58:13,869 ERROR ~ 
+
+@6mjep65ba
+logout.php action not found
+
+Action not found
+Action logout.php could not be found. Error raised is Controller controllers.logout not found
+
+play.exceptions.ActionNotFoundException: Action logout.php not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.logout not found
+	... 3 more
+30 Jun 2015 21:58:36,208 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 21:58:36,470 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 22:09:43,181 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 22:09:43,550 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 22:19:34,126 ERROR ~ 
+
+@6mjep65bb
+Internal Server Error (500) for request POST /cadastrarCliente
+
+Execution exception (In /app/controllers/UsuarioController.java around line 46)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:228)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.UsuarioController.cadastrarCliente(UsuarioController.java:46)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:524)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:475)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:451)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:446)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:160)
+	... 1 more
+30 Jun 2015 22:26:21,184 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 22:26:21,443 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 22:26:50,651 ERROR ~ 
+
+@6mjep65bc
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:26:57,907 ERROR ~ 
+
+@6mjep65bd
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:27:05,194 ERROR ~ 
+
+@6mjep65be
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:28:32,946 ERROR ~ 
+
+@6mjep65bf
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:07,486 ERROR ~ 
+
+@6mjep65bg
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:24,183 ERROR ~ 
+
+@6mjep65bh
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:28,500 ERROR ~ 
+
+@6mjep65bi
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:32,981 ERROR ~ 
+
+@6mjep65bj
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:33,514 ERROR ~ 
+
+@6mjep65bk
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:38,584 ERROR ~ 
+
+@6mjep65bl
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:29:41,169 ERROR ~ 
+
+@6mjep65bm
+application.logout action not found
+
+Action not found
+Action application.logout could not be found. Error raised is No method public static void logout() was found in class controllers.application
+
+play.exceptions.ActionNotFoundException: Action application.logout not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void logout() was found in class controllers.application
+	... 3 more
+30 Jun 2015 22:30:59,405 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 22:30:59,678 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 22:31:02,199 ERROR ~ 
+
+@6mjep65bn
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:31:02,322 ERROR ~ 
+
+@6mjep65bo
+application.home action not found
+
+Action not found
+Action application.home could not be found. Error raised is No method public static void home() was found in class controllers.application
+
+play.exceptions.ActionNotFoundException: Action application.home not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:577)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: No method public static void home() was found in class controllers.application
+	... 3 more
+30 Jun 2015 22:34:10,956 ERROR ~ 
+
+@6mjep65bp
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:34:52,655 ERROR ~ 
+
+@6mjep65c0
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:36:18,077 ERROR ~ 
+
+@6mjep65c1
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:41:45,133 ERROR ~ 
+
+@6mjep65c2
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 22:41:45,661 ERROR ~ 
+
+@6mjep65c3
+application.{{produtos.img}} action not found
+
+Action not found
+Action application.{{produtos.img}} could not be found. Error raised is Controller controllers.application.{{produtos not found
+
+play.exceptions.ActionNotFoundException: Action application.{{produtos.img}} not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.application.{{produtos not found
+	... 3 more
+30 Jun 2015 23:17:17,712 ERROR ~ 
+
+@6mjep65c4
+logout.php action not found
+
+Action not found
+Action logout.php could not be found. Error raised is Controller controllers.logout not found
+
+play.exceptions.ActionNotFoundException: Action logout.php not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:566)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:84)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.logout not found
+	... 3 more
+30 Jun 2015 23:27:58,475 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 23:27:58,683 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 23:35:39,690 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 23:35:40,059 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 23:36:28,752 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 23:36:29,006 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 23:37:40,873 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 23:37:41,101 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 23:38:45,776 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 23:38:45,938 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default
+30 Jun 2015 23:40:30,661 ERROR ~ Cannot include routes for module crud (not found)
+30 Jun 2015 23:40:30,951 INFO  ~ Connected to jdbc:mysql://localhost:3306/leilao for default

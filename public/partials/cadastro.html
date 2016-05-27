@@ -1,0 +1,178 @@
+
+ <nav class="navbar navbar-default" style="margin-top:0px">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/home">Página Inicial</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/arrematados">Arrematados <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/proxitens">Próximos itens</a></li>
+        <li><a href="#/comofunciona">Como Funciona?</a></li>
+        
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control lg" placeholder="Busca" ng-model="query">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      	<li><a href="#/comofunciona">Olá {{nomeUsuario.nome}}</a> </li>
+      	<li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mais Informações <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#/contato">Contato</a></li>
+            <li class="divider"></li>
+            <li><a href="#/configuracoes">Configurações</a></li>
+            <li><a href="#/cadastrar&objeto">Cadastrar Objeto</a></li>
+            <li ng-show="conexao" ng-click="conexao"><a href="logout">Sair</a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-3 centered">
+        <img src="../public/img/icon.png" width="200" height="200" />
+      </div>
+      <div class="col-sm-9 centered"  ng-controller="myCtrl">
+        <br><br>
+        <h1>{{nomeLeilao}}</h1>
+        <p>{{descricaoLeilao}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container" ng-controller="myCtrl">
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+		<button class="btn btn-primary btn-block" ng-click="cadastrarSocio = !cadastrarSocio" ng-show="cadastrarCliente" type="button" data-toggle="collapse" data-target="#cadastrarCliente" aria-expanded="false" aria-controls="cadastrarCliente">
+				Quero ser Cliente
+			</button>
+			<div class="collapse" id="cadastrarCliente">
+			  <div class="well">
+				<form role="form" method="POST" action="cadastrarCliente">
+				<h5>Campos com * sao obrigatorios!</h5>
+					<div class="form-group">
+						 <label>Nome*</label><input type="text" required="" class="form-control" id="nome" name="nome"/>
+					</div>
+					<div class="form-group">
+						 <label>Endereço*</label><input type="text" required="" class="form-control" id="endereco" name="endereco"/>
+					</div>
+					<div class="form-group">
+						 <label>CPF*</label><input type="text" required="" class="form-control" id="cpf" name="cpf"/>
+					</div>
+					<div class="form-group">
+						 <label>CEP*</label><input type="text" required="" class="form-control" id="cep" name="cep"/>
+					</div>
+					<div class="form-group">
+						 <label>Cidade*</label><input type="text" required="" class="form-control" id="cidade" name="cidade"/>
+					</div>
+					<div class="form-group">
+						 <label>Telefone Residencial (Celular)</label><input type="text" class="form-control" id="telefone" name="telefone"/>
+					</div>
+					<div class="form-group">
+						 <label>Email*</label><input type="email" required="" class="form-control" id="email" name="email"/>
+					</div>
+					<div class="form-group">
+						 <label>Senha*</label><input type="password" required="" class="form-control" id="senha" name="senha"/>
+					</div>
+					<button type="submit" class="btn btn-default" style="color:black">Cadastrar</button>
+				</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 column">
+			
+			<button class="btn btn-primary btn-block" ng-click="cadastrarCliente = !cadastrarCliente" ng-show="cadastrarSocio"type="button" data-toggle="collapse"  data-target="#cadastrarSocio" aria-expanded="false" aria-controls="cadastrarSocio">
+				Quero ser Sócio
+			</button>
+							
+			
+			
+			<div class="collapse" id="cadastrarSocio" >
+			  <div class="well">
+				<form role="form" method="POST" action="cadastrarSocio">
+					<div class="form-group">
+						 <label>Nome Completo</label><input required="" type="text" class="form-control" id="nome" name="nome"/>
+					</div>
+					<div class="form-group">
+						 <label>CNPJ</label><input required=""type="text" class="form-control" id="cnpj" name="cnpj"/>
+					</div>
+					<div class="form-group">
+						 <label>Razão Social</label><input required="" type="text" class="form-control" id="razaoSocial" name="razaoSocial"/>
+					</div>
+					<div class="form-group">
+						 <label>Endereço</label><input required=""  type="text" class="form-control" id="endereco" name="endereco"/>
+					</div>
+					<div class="form-group">
+						 <label>Cidade</label><input required=""  type="text" class="form-control" id="cidade" name="cidade"/>
+					</div>
+					<div class="form-group">
+						 <label>CEP</label><input required=""  type="text" class="form-control" id="cep" name="cep"/>
+					</div>
+					<div class="form-group">
+						 <label>Cidade</label><input required=""  type="text" class="form-control" id="cidade" name="cidade"/>
+					</div>
+					<div class="form-group">
+						 <label>Telefone</label><input required=""  type="text" class="form-control" id="telefone" name="telefone"/>
+					</div>
+					<div class="form-group">
+						 <label>Email</label><input required=""  type="email" class="form-control" id="email" name="email"/>
+					</div>
+					<div class="form-group">
+						 <label>Senha</label><input required=""  type="password" class="form-control" id="senha" name="senha"/>
+					</div>
+					<!-- 
+					<div class="form-group">
+						 <label>Confirmar Senha</label><input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha"/>
+					</div>
+					 -->
+					<button type="submit" class="btn btn-default" style="color:black">Cadastrar</button>
+				</form>
+				</div>
+			</div>
+	</div>
+</div>
+<br>
+
+ <footer>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <header class="hero-unit">
+              <p>Formas Pagamento</p>
+              <div class="row">
+                <img src="../public/img/formaspagamento_v3.png">
+              </div>
+            </header>
+          </div>
+          <div class="col-sm-4">
+            <header class="hero-unit">
+              <p>Certificados</p>
+              <div class="row">
+                <img src="../public/img/certificados.png">
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+      <div class="push">
+        <!--//-->
+      </div>
+    </div>
+</footer>
+<div ng-include="'../public/css/design.css'"></div>
